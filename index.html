@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molly McCarthy | Graphic Design Student </title>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
+<body>
+    <div class="main-wrapper">
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('about')">About</a></li>
+            <li><a href="#" onclick="showPage('blog')">Blog</a></li>
+            <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="home" class="page-section active">
+        <div class="hero">
+            <h1>Graphic Design Blog</h1>
+            <p>Exploring how digital art intersects with physical through linocut printing </p>
+        </div>
+        <div class="container">
+            <h2>Welcome to Molly's linocut portfolio</h2>
+            <p>Discover the beautiful world of linocut printing, where traditional craftsmanship meets contemporary design. This portfolio showcases techniques, projects, and insights into this rewarding printmaking method.</p>
+        </div>
+    </div>
+
+    <div id="about" class="page-section">
+        <div class="container">
+            <h2>About Linocut Printing</h2>
+            <div class="about-content">
+                <p>Linocut printing is a relief printing technique that involves carving an image into a sheet of linoleum. The raised areas are inked and pressed onto paper, creating bold, graphic prints with distinctive character.</p>
+                
+                <p>This art form gained popularity in the early 20th century and has been embraced by artists worldwide for its accessibility and expressive potential. From simple designs to complex multi-color prints, linocut offers endless creative possibilities.</p>
+                
+                <p>The process combines traditional craftsmanship with artistic vision, making it perfect for both beginners and experienced printmakers. Each print carries the unique marks of hand-carved blocks, ensuring that no two impressions are exactly alike.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="blog" class="page-section">
+        <div class="container">
+            <h2>Blog Posts</h2>
+            <div class="blog-posts">
+                <div class="blog-card">
+                    <h3>Getting Started with Linocut</h3>
+                    <div class="blog-date">October 15, 2024</div>
+                    <p>Learn the essential tools and materials you need to begin your linocut journey. From carving tools to printing inks, we cover everything you need to know.</p>
+                </div>
+                
+                <div class="blog-card">
+                    <h3>Carving Techniques for Beginners</h3>
+                    <div class="blog-date">October 22, 2024</div>
+                    <p>Master basic carving techniques including safety tips, stroke direction, and how to create different textures and line weights in your designs.</p>
+                </div>
+                
+                <div class="blog-card">
+                    <h3>Multi-Color Printing Methods</h3>
+                    <div class="blog-date">October 29, 2024</div>
+                    <p>Explore advanced techniques for creating multi-color linocut prints, including registration methods and the reduction printing process.</p>
+                </div>
+                
+                <div class="blog-card">
+                    <h3>Design Tips for Bold Prints</h3>
+                    <div class="blog-date">November 5, 2024</div>
+                    <p>Discover how to create designs that work well with the linocut medium. Learn about positive and negative space, contrast, and composition.</p>
+                </div>
+                
+                <div class="blog-card">
+                    <h3>Caring for Your Tools</h3>
+                    <div class="blog-date">November 12, 2024</div>
+                    <p>Proper maintenance ensures your carving tools stay sharp and safe. Follow these guidelines to keep your equipment in top condition.</p>
+                </div>
+                
+                <div class="blog-card">
+                    <h3>Famous Linocut Artists</h3>
+                    <div class="blog-date">November 19, 2024</div>
+                    <p>Explore the work of influential linocut artists who have shaped this medium, from Picasso's bold experiments to contemporary printmakers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="page-section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Linocut Printing Portfolio. All rights reserved.</p>
+        <p>Created for Social Media Class</p>
+    </footer>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! This is a static demo, so the form does not actually send data.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
